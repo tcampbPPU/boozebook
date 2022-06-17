@@ -77,6 +77,11 @@ if (! function_exists('multi_array_unique')) {
 }
 
 if (! function_exists('timezones')) {
+    /**
+     * Returns list of PHP timezones
+     *
+     * @return array
+     */    
     function timezones(): array
     {
         return (array) timezone_identifiers_list();
