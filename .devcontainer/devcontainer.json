@@ -1,0 +1,33 @@
+{
+  "name": "BoozeBook VSCode Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "editorconfig.editorconfig",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-typescript-next",
+    "bmewburn.vscode-intelephense-client",
+    "henrynguyen5-vsc.vsc-nvm",
+    "hbenl.vscode-test-explorer",
+    "recca0120.vscode-phpunit",
+    "dbaeumer.vscode-eslint",
+    "valeryanm.vscode-phpsab",
+    "bradlc.vscode-tailwindcss",
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin"
+  ],
+  "forwardPorts": [
+    8000,
+    3000,
+    9003
+  ],
+  "remoteUser": "vscode"
+}

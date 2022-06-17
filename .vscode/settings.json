@@ -1,0 +1,25 @@
+{
+    "[php]": {
+        "editor.defaultFormatter": "valeryanm.vscode-phpsab",
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.formatOnSave": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "vue"
+    ],
+    "phpsab.snifferEnable": true,
+    "phpsab.executablePathCBF": "./vendor/bin/phpcbf",
+    "phpsab.executablePathCS": "./vendor/bin/phpcs",
+    "phpsab.snifferShowSources": true,
+    "phpsab.snifferMode": "onType",
+    "phpunit.args": [
+        "-c",
+        "tests/php/phpunit.xml"
+    ]
+}
