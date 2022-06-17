@@ -62,7 +62,7 @@
   "prefer-stable": true,
   "scripts": {
     "test": [
-      "vendor/bin/pest -c tests/php/phpunit.xml --colors=always --testdox --coverage-text"
+      "vendor/bin/pest -c tests/php/phpunit.xml --colors=always --testdox"
     ],
     "test-c": [
       "XDEBUG_MODE=coverage vendor/bin/pest -c tests/php/phpunit.xml --colors=always --testdox --coverage-text"
