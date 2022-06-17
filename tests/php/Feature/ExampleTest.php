@@ -1,3 +1,3 @@
 <?php
 
-test('example')->assertTrue(true);
+test('example test')->assertTrue(true);
