@@ -34,8 +34,7 @@ jobs:
       - name: 🗃️ Migrate tables
         run: php artisan migrate:fresh --env=testing
       - name: 🧪 Run phpunit
-        run: vendor/bin/phpunit --color=always --testdox --coverage-text --coverage-html coverage/ -c tests/php/phpunit.xml
-
+        run: vendor/bin/pest --color=always --testdox --coverage-text --coverage-html coverage/ -c tests/php/phpunit.xml
       - uses: actions/upload-artifact@v2
         with:
           name: coverage-html
