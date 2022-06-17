@@ -37,11 +37,3 @@ Route::get('me', [AuthController::class, 'me'])->middleware('auth:api')->name('g
 
 // Session
 Route::apiResource('session', SessionController::class)->middleware('auth:api')->only(['index', 'destroy']);
-
-// Contact
-// Route::apiResource('contact', ContactController::class);
-Route::get('contact', [ContactController::class, 'index']);
-Route::post('contact', [ContactController::class, 'store'])->middleware('auth:api');
-Route::get('contact/{contact}', [ContactController::class, 'show']);
-Route::put('contact/{contact}', [ContactController::class, 'update'])->middleware('auth:api');
-Route::delete('contact/{contact}', [ContactController::class, 'destroy'])->middleware('auth:api');
