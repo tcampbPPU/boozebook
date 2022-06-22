@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\{Address, User};
+use App\Models\Address;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -19,8 +20,7 @@ class UserSeeder extends Seeder
 
         User::factory($multiplier * 10)
             ->create()
-            ->map(fn(User $user) =>
-                $user->addresses()
+            ->map(fn (User $user) => $user->addresses()
                     ->saveMany(
                         Address::factory($multiplier * 2)->make()
                     ));

@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\{BelongsTo, BelongsToMany};
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Models\Bartender
@@ -42,6 +44,16 @@ class Bartender extends Model
         return $this->belongsToMany(Event::class, 'bartender_event')
             ->using(BartenderEvent::class)
             ->withTimestamps();
+    }
+
+    /**
+     * Get all of the invoices for the Bartender
+     *
+     * @return HasMany<Invoice>
+     */
+    public function invoices(): ?HasMany
+    {
+        return $this->hasMany(Invoice::class);
     }
 
     /**

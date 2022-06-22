@@ -1,11 +1,9 @@
 <?php
 
-use App\Http\Controllers\{
-    AuthController,
-    ContactController,
-    Controller,
-    SessionController,
-};
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,3 +35,9 @@ Route::get('me', [AuthController::class, 'me'])->middleware('auth:api')->name('g
 
 // Session
 Route::apiResource('session', SessionController::class)->middleware('auth:api')->only(['index', 'destroy']);
+
+// group with v1
+Route::group(['prefix' => 'v1'], function () {
+    // Events
+    Route::apiResource('event', EventController::class);
+});

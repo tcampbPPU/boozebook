@@ -2,13 +2,24 @@
 
 namespace App\Policies;
 
-use App\Models\{Event, User};
+use App\Models\Event;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use Illuminate\Auth\Access\Response;
 
 class EventPolicy
 {
     use HandlesAuthorization;
+
+    /**
+     * Determine whether the user can view any events.
+     *
+     * @param  User  $user
+     * @return bool
+     */
+    public function viewAny(?User $user): bool
+    {
+        return true;
+    }
 
     /**
      * Determine whether the user can view the model.

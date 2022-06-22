@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\{Bartender, User};
+use App\Models\Bartender;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class BartenderSeeder extends Seeder
@@ -21,8 +22,7 @@ class BartenderSeeder extends Seeder
             ->inRandomOrder()
             ->take($numberOfUser)
             ->get()
-            ->map(fn(User $user) =>
-                $user->bartender()->save(
+            ->map(fn (User $user) => $user->bartender()->save(
                     Bartender::factory()->make()
                 ));
     }

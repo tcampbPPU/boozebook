@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 py-4 bg-white dark:bg-gray-800 sm:px-10">
-    <img class="w-auto h-12 pb-4 mx-auto" src="/punchlist-logo-dark-1.svg" alt="PunchBook">
+    <img class="w-auto h-16 pb-4 mx-auto" src="/logo.png" alt="BoozeBook">
     <div class="grid grid-cols-2 gap-3">
       <div>
         <push-button class="justify-center w-full" @click="login('google')">

@@ -10,6 +10,7 @@
     "fruitcake/laravel-cors": "^3.0",
     "google/apiclient": "^2.11",
     "guzzlehttp/guzzle": "^7.0.1",
+    "laravel/cashier": "^13.11",
     "laravel/framework": "^9.0",
     "laravel/socialite": "^5.2",
     "laravel/tinker": "^2.5",
@@ -20,6 +21,7 @@
     "barryvdh/laravel-ide-helper": "^2.8",
     "fakerphp/faker": "^1.9.1",
     "fumeapp/modeltyper": "^1.0",
+    "laravel/pint": "^0.1.3",
     "mockery/mockery": "^1.4.4",
     "nunomaduro/collision": "^6.1",
     "nunomaduro/larastan": "^2.0",
@@ -88,6 +90,20 @@
     ],
     "models": [
       "@php artisan ide-helper:models"
+    ],
+    "pint": [
+      "vendor/bin/pint"
     ]
+  },
+  "scripts-descriptions": {
+    "test": "Run the PHPUnit tests.",
+    "post-autoload-dump": "Run after autoloading has been dumped.",
+    "post-root-package-install": "Run after the root package has been installed.",
+    "post-create-project-cmd": "Run after the project has been created.",
+    "cs": "Run the PHP CodeSniffer.",
+    "cs-v": "Run the PHP CodeSniffer verbosely.",
+    "stan": "Run the PHPStan analyser.",
+    "models": "Run the IDE Helper.",
+    "pint": "Run the Pint analyser."
   }
 }

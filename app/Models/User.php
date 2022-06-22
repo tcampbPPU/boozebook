@@ -4,10 +4,13 @@ namespace App\Models;
 
 use acidjazz\Humble\Traits\Humble;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Relations\{HasMany, HasOne};
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use function Illuminate\Events\queueable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
 
 /**
  * App\Models\User
@@ -52,20 +55,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  */
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, Humble;
+    use HasFactory, Notifiable, Humble, Billable;
 
     protected $guarded = [];
 
     protected $appends = [
         'first_name',
-        'is_trial'
+        'is_trial',
     ];
 
     protected $casts = [
-        'is_sub' => 'boolean'
+        'is_sub' => 'boolean',
     ];
 
     public const ADMIN = 'admin';
+
     public const CUSTOMER = 'customer';
 
     public static array $roles = [self::ADMIN, self::CUSTOMER];
@@ -81,6 +85,20 @@ class User extends Authenticatable
             'name' => 'Sessions',
         ],
     ];
+
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::updated(queueable(function ($customer) {
+            if ($customer->hasStripeId()) {
+                $customer->syncStripeCustomerDetails();
+            }
+        }));
+    }
 
     /**
      * Return if user is in trial mode.

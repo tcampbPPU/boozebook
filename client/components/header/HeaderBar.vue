@@ -6,7 +6,7 @@
         <div class="flex items-center">
           <div class="flex w-16 h-8">
             <router-link to="/" class="flex-shrink-0">
-              <img src="/punchlist.svg" alt="PunchBook" class="h-8">
+              <img src="/logo.png" alt="BoozeBook" class="h-8">
             </router-link>
             <header-apps />
           </div>

@@ -36,14 +36,14 @@ class Provider extends Model
 
     protected $guarded = [];
 
-    public static array $allowed = ['email', 'google', 'github'];
+    public static array $allowed = ['email', 'google'];
 
     protected $casts = [
-        'payload' => AsArrayObject::class
+        'payload' => AsArrayObject::class,
     ];
 
     protected $hidden = [
-        'payload.token'
+        'payload.token',
     ];
 
     /**

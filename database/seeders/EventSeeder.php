@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\{Event, User};
+use App\Models\Event;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class EventSeeder extends Seeder
@@ -19,8 +20,7 @@ class EventSeeder extends Seeder
 
         User::query()
             ->get()
-            ->map(fn(User $user) =>
-                $user->events()
+            ->map(fn (User $user) => $user->events()
                     ->saveMany(
                         Event::factory($multiplier * 3)
                         ->for($user->addresses()->inRandomOrder()->first())
