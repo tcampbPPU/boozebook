@@ -26,48 +26,48 @@ class EventController extends Controller
         );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return Response|JsonResponse
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    // /**
+    //  * Store a newly created resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @return Response|JsonResponse
+    //  */
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Event  $event
-     * @return Response|JsonResponse
-     */
-    public function show(Event $event)
-    {
-        //
-    }
+    // /**
+    //  * Display the specified resource.
+    //  *
+    //  * @param  \App\Models\Event  $event
+    //  * @return Response|JsonResponse
+    //  */
+    // public function show(Event $event)
+    // {
+    //     //
+    // }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
-     * @return Response|JsonResponse
-     */
-    public function update(Request $request, Event $event)
-    {
-        //
-    }
+    // /**
+    //  * Update the specified resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  \App\Models\Event  $event
+    //  * @return Response|JsonResponse
+    //  */
+    // public function update(Request $request, Event $event)
+    // {
+    //     //
+    // }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Event  $event
-     * @return Response|JsonResponse
-     */
-    public function destroy(Event $event)
-    {
-        //
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  \App\Models\Event  $event
+    //  * @return Response|JsonResponse
+    //  */
+    // public function destroy(Event $event)
+    // {
+    //     //
+    // }
 }
