@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Event[] $events
  * @property-read int|null $events_count
  * @property-read \App\Models\User|null $user
+ *
  * @method static \Database\Factories\BartenderFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Bartender newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Bartender newQuery()

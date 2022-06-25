@@ -38,6 +38,7 @@ use Laravel\Cashier\Billable;
  * @property-read int|null $providers_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\acidjazz\Humble\Models\Session[] $sessions
  * @property-read int|null $sessions_count
+ *
  * @method static \Database\Factories\UserFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
