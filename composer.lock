@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82da27264383d3d80c84fdf9d62832a3",
+    "content-hash": "f748d29e963d58b2951adc243071bc99",
     "packages": [
         {
             "name": "acidjazz/humble",
@@ -8991,20 +8991,21 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v0.1.7",
+            "version": "v0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "5d3ddb86ce445b50e342b04e90cb43cf43f0d2b7"
+                "reference": "d0829631687c1238abdd660daac3d7218254b65c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/5d3ddb86ce445b50e342b04e90cb43cf43f0d2b7",
-                "reference": "5d3ddb86ce445b50e342b04e90cb43cf43f0d2b7",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/d0829631687c1238abdd660daac3d7218254b65c",
+                "reference": "d0829631687c1238abdd660daac3d7218254b65c",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
+                "ext-mbstring": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
                 "php": "^8.0"
@@ -9052,7 +9053,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2022-06-23T16:21:52+00:00"
+            "time": "2022-07-04T16:04:06+00:00"
         },
         {
             "name": "maximebf/debugbar",
