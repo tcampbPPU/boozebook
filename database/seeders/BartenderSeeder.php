@@ -23,7 +23,7 @@ class BartenderSeeder extends Seeder
             ->take($numberOfUser)
             ->get()
             ->map(fn (User $user) => $user->bartender()->save(
-                    Bartender::factory()->make()
-                ));
+                Bartender::factory()->make()
+            ));
     }
 }
